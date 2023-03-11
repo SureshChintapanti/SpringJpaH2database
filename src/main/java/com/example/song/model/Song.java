@@ -3,34 +3,34 @@ package com.example.song.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="playlist")
+@Table(name = "playlist")
 public class Song {
+
     @Id
-    @Column(name="songid")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "SONGID")
     private int songId;
 
-    @Column(name="songname")
+    @Column(name = "SONGNAME")
     private String songName;
 
-    @Column(name="lyricist")
+    @Column(name =  "LYRICIST")
     private String lyricist;
 
-    @Column(name="singer")
+    @Column(name =  "SINGER")
     private String singer;
 
-    @Column(name="musicdirector")
+    @Column(name = "MUSICDIRECTOR")
     private String musicDirector;
-
-    public Song(){}
-
+    public Song() {}
     public Song(int songId, String songName, String lyricist, String singer, String musicDirector) {
-        this.songId = songId;
-        this.songName = songName;
-        this.lyricist = lyricist;
-        this.singer = singer;
-        this.musicDirector = musicDirector;
-    }
+    this.songId = songId;
+    this.songName = songName;
+    this.lyricist = lyricist;
+    this.singer = singer;
+    this.musicDirector = musicDirector;
+}
+
 
     public int getSongId() {
         return songId;
@@ -68,7 +68,7 @@ public class Song {
         return musicDirector;
     }
 
-    public void setMusicDirector(String musicDirector) {
+    public void setMusicDirector(String musicDirector){
         this.musicDirector = musicDirector;
     }
 }
